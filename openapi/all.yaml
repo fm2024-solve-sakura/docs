@@ -6,3 +6,10 @@ paths:
 
   /login:
     $ref: ./paths/login.yaml
+  
+  /me/reserve:
+    $ref: ./paths/me/reserve.yaml
+  /me/enter:
+    $ref: ./paths/me/enter.yaml
+  /me/history:
+    $ref: ./paths/me/history.yaml

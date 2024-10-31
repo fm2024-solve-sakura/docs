@@ -1,0 +1,14 @@
+get:
+  responses:
+    '200':
+      content:
+        application/json
+    '400':
+      content:
+        application/json
+    '401':
+      content:
+        application/json
+    '500':
+      content:
+        application/json
