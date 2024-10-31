@@ -4,8 +4,8 @@ info:
   version: 0.1.0
 paths:
 
-  /login:
-    $ref: ./paths/login.yaml
+  /auth:
+    $ref: ./paths/auth.yaml
   
   /me/reserve:
     $ref: ./paths/me/reserve.yaml
