@@ -3,45 +3,48 @@ auth:
   properties:
     email:
       type: string
-      example: 'example@gmail.com'
-      required: true
+      format: email
     attributes:
       type: array
       items:
         type: string
       example: ['fukuoka-mitou']
-      required: true
+  required:
+    - email
+    - attributes
 user:
   type: object
   properties:
     id:
       type: string
-      example: 'uuid'
-      required: true
+      format: uuid
     username:
       type: string
       example: 'username'
-      required: true
     email:
       type: string
-      example: 'example@gmail.com'
-      required: true
+      format: email
     attributes:
       type: array
       items:
         type: string
       example: ['fukuoka-mitou']
-      required: true
+  required:
+    - id
+    - username
+    - email
+    - attributes
 attributes:
   type: object
   properties:
     id:
       type: string
-      example: 'uuid'
-      required: true
+      format: uuid
     attributes:
       type: array
       items:
         type: string
       example: ['fukuoka-mitou']
-      required: true
+  required:
+    - id
+    - attributes
