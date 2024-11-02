@@ -29,6 +29,9 @@ reserve-res:
     purpose:
       type: string
       example: 'リモートワーク'
+    status:
+      type: enum
+      enum: ['reserved', 'in_use', 'used', 'canceled']
     start_at:
       type: string
       format: date-time
@@ -39,6 +42,15 @@ reserve-res:
     - id
     - place
     - purpose
+    - status
     - start_at
     - end_at
+id:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuid
+  required:
+    - id
     
