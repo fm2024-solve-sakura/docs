@@ -8,7 +8,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/auth.yaml#/auth'
+            $ref: '../components/schemas/user.yaml#/auth'
     '400':
       description: ヘッダーが存在しない
       content:
@@ -37,7 +37,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/auth.yaml#/auth'
+            $ref: '../components/schemas/user.yaml#/auth'
     '400':
       description: ヘッダーが存在しない
       content:
