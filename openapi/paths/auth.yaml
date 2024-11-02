@@ -37,7 +37,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user.yaml#/auth'
+            $ref: '../components/schemas/user.yaml#/user'
     '400':
       description: ヘッダーが存在しない
       content:
