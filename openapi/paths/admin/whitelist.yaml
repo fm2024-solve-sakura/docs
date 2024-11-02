@@ -1,0 +1,20 @@
+get:
+  responses:
+    '200':
+      content:
+        application/json
+    '400':
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-400'
+    '401':
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '500':
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'
