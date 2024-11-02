@@ -17,7 +17,5 @@ paths:
   /me/history:
     $ref: ./paths/me/history.yaml
 
-  /admin/whitelist:
-    $ref: ./paths/admin/whitelist.yaml
-  /admin/whitelist/{id}:
-    $ref: ./paths/admin/whitelist_id.yaml
+  /admin/users:
+    $ref: ./paths/admin/users.yaml

@@ -32,3 +32,16 @@ user:
         type: string
       example: ['fukuoka-mitou']
       required: true
+attributes:
+  type: object
+  properties:
+    id:
+      type: string
+      example: 'uuid'
+      required: true
+    attributes:
+      type: array
+      items:
+        type: string
+      example: ['fukuoka-mitou']
+      required: true
