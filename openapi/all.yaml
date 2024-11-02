@@ -7,7 +7,9 @@ paths:
 
   /auth:
     $ref: ./paths/auth.yaml
-  
+  /places:
+    $ref: ./paths/me/places.yaml
+
   /me/reserve:
     $ref: ./paths/me/reserve.yaml
   /me/enter:
@@ -16,8 +18,6 @@ paths:
     $ref: ./paths/me/cancel.yaml
   /me/history:
     $ref: ./paths/me/history.yaml
-  /admin/places:
-    $ref: ./paths/me/places.yaml
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
