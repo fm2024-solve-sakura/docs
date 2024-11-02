@@ -8,7 +8,7 @@ paths:
   /auth:
     $ref: ./paths/auth.yaml
   /places:
-    $ref: ./paths/me/places.yaml
+    $ref: ./paths/places.yaml
 
   /me/reserve:
     $ref: ./paths/me/reserve.yaml

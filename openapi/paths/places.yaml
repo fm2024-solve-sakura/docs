@@ -1,7 +1,7 @@
 get:
   summary: 施設情報一覧取得
   parameters:
-    $ref: '../../components/params/header.yaml#/auth'
+    $ref: '../components/params/header.yaml#/auth'
   responses:
     '200':
       description: 認証成功
@@ -10,17 +10,17 @@ get:
           schema:
             type: array
             items:
-              $ref: '../../components/schemas/place.yaml#/place'
+              $ref: '../components/schemas/place.yaml#/place'
     '401':
       description: 認証失敗
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/errors.yaml#/error-401'
+            $ref: '../components/schemas/errors.yaml#/error-401'
     '500':
       description: サーバーエラー
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/errors.yaml#/error-500'
+            $ref: '../components/schemas/errors.yaml#/error-500'
     
