@@ -1,17 +1,3 @@
-auth:
-  type: object
-  properties:
-    email:
-      type: string
-      format: email
-    attributes:
-      type: array
-      items:
-        type: string
-      example: ['fukuoka-mitou']
-  required:
-    - email
-    - attributes
 user:
   type: object
   properties:
