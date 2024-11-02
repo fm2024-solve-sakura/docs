@@ -9,8 +9,8 @@ post:
         schema:
           $ref: '../../components/schemas/reserve.yaml#/reserve-req'
   responses:
-    '200':
-      description: 認証成功
+    '201':
+      description: 予約成功
       content:
         application/json:
           schema:

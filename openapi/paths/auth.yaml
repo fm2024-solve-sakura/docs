@@ -3,8 +3,8 @@ post:
   parameters:
     $ref: '../components/params/header.yaml#/auth'
   responses:
-    '200':
-      description: 認証成功
+    '201':
+      description: 登録成功
       content:
         application/json:
           schema:
