@@ -6,6 +6,19 @@ id:
       format: uuid
   required:
     - id
+    - user_id
+id-with-userid:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuid
+    user_id:
+      type: string
+      format: uuid
+  required:
+    - id
+    - user_id
 reserve:
   type: object
   properties:

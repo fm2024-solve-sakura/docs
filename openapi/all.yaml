@@ -12,14 +12,15 @@ paths:
 
   /me/reserve:
     $ref: ./paths/me/reserve.yaml
-  /me/enter:
-    $ref: ./paths/me/enter.yaml
-  /me/exit:
-    $ref: ./paths/me/exit.yaml
   /me/cancel:
     $ref: ./paths/me/cancel.yaml
   /me/history:
     $ref: ./paths/me/history.yaml
+
+  /system/enter:
+    $ref: ./paths/system/enter.yaml
+  /system/exit:
+    $ref: ./paths/system/exit.yaml
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
