@@ -23,3 +23,5 @@ paths:
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
+  /admin/places:
+    $ref: ./paths/admin/places.yaml

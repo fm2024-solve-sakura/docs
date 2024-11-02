@@ -13,8 +13,40 @@ place:
     address:
       type: string
       example: '福岡県福岡市xxx'
+    open_time:
+      type: string
+      format: time
+    clone_time:
+      type: string
+      format: time
   required:
     - id
     - name
     - description
     - address
+    - open_time
+    - clone_time
+place-new:
+  type: object
+  properties:
+    name:
+      type: string
+      example: '作業スペースA'
+    description:
+      type: string
+      example: '一人用作業室・wifiコンセント完備'
+    address:
+      type: string
+      example: '福岡県福岡市xxx'
+    open_time:
+      type: string
+      format: time
+    clone_time:
+      type: string
+      format: time
+  required:
+    - name
+    - description
+    - address
+    - open_time
+    - clone_time
