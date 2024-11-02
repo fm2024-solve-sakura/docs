@@ -7,14 +7,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/reserve.yaml#/reserve-req'
+          $ref: '../../components/schemas/reserve.yaml#/reserve-new'
   responses:
     '201':
       description: 予約成功
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/reserve.yaml#/reserve-res'
+            $ref: '../../components/schemas/reserve.yaml#/reserve'
     '400':
       description: リクエストボディが不正
       content:

@@ -10,7 +10,7 @@ get:
           schema:
             type: array
             items:
-              $ref: '../../components/schemas/reserve.yaml#/reserve-res'
+              $ref: '../../components/schemas/reserve.yaml#/reserve'
     '401':
       description: 認証失敗
       content:

@@ -1,24 +1,12 @@
-reserve-req:
+id:
   type: object
   properties:
-    place_id:
+    id:
       type: string
       format: uuid
-    purpose:
-      type: string
-      example: 'リモートワーク'
-    start_at:
-      type: string
-      format: date-time
-    end_at:
-      type: string
-      format: date-time
   required:
-    - place_id
-    - purpose
-    - start_at
-    - end_at
-reserve-res:
+    - id
+reserve:
   type: object
   properties:
     id:
@@ -45,12 +33,24 @@ reserve-res:
     - status
     - start_at
     - end_at
-id:
+reserve-new:
   type: object
   properties:
-    id:
+    place_id:
       type: string
       format: uuid
+    purpose:
+      type: string
+      example: 'リモートワーク'
+    start_at:
+      type: string
+      format: date-time
+    end_at:
+      type: string
+      format: date-time
   required:
-    - id
+    - place_id
+    - purpose
+    - start_at
+    - end_at
     

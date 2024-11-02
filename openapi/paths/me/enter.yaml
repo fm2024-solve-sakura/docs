@@ -14,7 +14,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/reserve.yaml#/reserve-res'
+            $ref: '../../components/schemas/reserve.yaml#/reserve'
     '400':
       description: リクエストボディが不正
       content:
