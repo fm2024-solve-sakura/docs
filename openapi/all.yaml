@@ -2,6 +2,7 @@ openapi: 3.0.0
 info:
   title: fukuoka-mitou
   version: 0.1.0
+
 paths:
 
   /auth:
@@ -15,3 +16,8 @@ paths:
     $ref: ./paths/me/cancel.yaml
   /me/history:
     $ref: ./paths/me/history.yaml
+
+  /admin/whitelist:
+    $ref: ./paths/admin/whitelist.yaml
+  /admin/whitelist/{id}:
+    $ref: ./paths/admin/whitelist_id.yaml
