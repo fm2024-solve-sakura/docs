@@ -16,6 +16,8 @@ paths:
     $ref: ./paths/me/cancel.yaml
   /me/history:
     $ref: ./paths/me/history.yaml
+  /admin/places:
+    $ref: ./paths/me/places.yaml
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
