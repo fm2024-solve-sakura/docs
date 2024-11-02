@@ -1,0 +1,44 @@
+reserve-req:
+  type: object
+  properties:
+    place_id:
+      type: string
+      format: uuid
+    purpose:
+      type: string
+      example: 'リモートワーク'
+    start_at:
+      type: string
+      format: date-time
+    end_at:
+      type: string
+      format: date-time
+  required:
+    - place_id
+    - purpose
+    - start_at
+    - end_at
+reserve-res:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuid
+    place:
+      $ref: './place.yaml#/place'
+    purpose:
+      type: string
+      example: 'リモートワーク'
+    start_at:
+      type: string
+      format: date-time
+    end_at:
+      type: string
+      format: date-time
+  required:
+    - id
+    - place
+    - purpose
+    - start_at
+    - end_at
+    

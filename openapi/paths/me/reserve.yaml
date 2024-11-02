@@ -1,19 +1,34 @@
 post:
+  summary: 施設予約
+  parameters:
+    $ref: '../../components/params/header.yaml#/auth'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/reserve.yaml#/reserve-req'
   responses:
     '200':
+      description: 認証成功
       content:
-        application/json
+        application/json:
+          schema:
+            $ref: '../../components/schemas/reserve.yaml#/reserve-res'
     '400':
+      description: リクエストボディが不正
       content:
         application/json:
           schema:
             $ref: '../../components/schemas/errors.yaml#/error-400'
     '401':
+      description: 認証失敗
       content:
         application/json:
           schema:
             $ref: '../../components/schemas/errors.yaml#/error-401'
     '500':
+      description: サーバーエラー
       content:
         application/json:
           schema:
