@@ -11,5 +11,7 @@ paths:
     $ref: ./paths/me/reserve.yaml
   /me/enter:
     $ref: ./paths/me/enter.yaml
+  /me/cancel:
+    $ref: ./paths/me/cancel.yaml
   /me/history:
     $ref: ./paths/me/history.yaml
