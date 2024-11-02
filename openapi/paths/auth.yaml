@@ -1,24 +1,34 @@
 get:
+  summary: ユーザー情報取得
+  parameters:
+    $ref: '../components/params/header.yaml#/auth'
   responses:
     '200':
+      description: 認証成功
       content:
-        application/json
+        application/json:
+          schema:
+            $ref: '../components/schemas/auth.yaml#/auth'
     '400':
+      description: ヘッダーが存在しない
       content:
         application/json:
           schema:
             $ref: '../components/schemas/errors.yaml#/error-400'
     '401':
+      description: トークンが不正
       content:
         application/json:
           schema:
             $ref: '../components/schemas/errors.yaml#/error-401'
     '404':
+      description: ユーザーが存在しない
       content:
         application/json:
           schema:
             $ref: '../components/schemas/errors.yaml#/error-404'
     '500':
+      description: サーバーエラー
       content:
         application/json:
           schema:
