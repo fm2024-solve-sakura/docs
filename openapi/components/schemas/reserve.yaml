@@ -31,7 +31,7 @@ reserve:
       type: string
       example: 'リモートワーク'
     status:
-      type: enum
+      type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
     start_at:
       type: string
