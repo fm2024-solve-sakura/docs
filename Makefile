@@ -6,6 +6,7 @@ redocly:
 	redocly bundle openapi/all.yaml -o openapi/all.gen.yaml
 	redocly build-docs openapi/all.gen.yaml -o openapi/index.html
 
+# generate server code from openapi
 oapi-codegen:
 	@if ! command -v $$(go env GOPATH)/bin/oapi-codegen > /dev/null 2>&1; then \
 		go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest; \
