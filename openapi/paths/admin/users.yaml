@@ -1,7 +1,7 @@
 get:
   summary: ユーザー情報一覧取得
   parameters:
-    $ref: '../../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/header.yaml#/auth'
   responses:
     '200':
       description: 認証成功

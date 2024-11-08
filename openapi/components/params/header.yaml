@@ -1,8 +1,8 @@
 auth:
-  - in: header
-    description: Google認証トークン
-    name: Authorization
-    required: true
-    schema:
-      type: string
-      example: Bearer <token>
+  in: header
+  description: Google認証トークン
+  name: Authorization
+  required: true
+  schema:
+    type: string
+    example: Bearer <token>

@@ -1,7 +1,7 @@
 post:
   summary: 退室
   parameters:
-    $ref: '../../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/header.yaml#/auth'
   requestBody:
     required: true
     content:

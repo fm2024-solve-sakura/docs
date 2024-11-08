@@ -1,7 +1,7 @@
 post:
   summary: 予約キャンセル
   parameters:
-    $ref: '../../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/header.yaml#/auth'
   requestBody:
     required: true
     content:
