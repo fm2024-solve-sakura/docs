@@ -30,6 +30,11 @@ reserve:
     purpose:
       type: string
       example: 'リモートワーク'
+    attributes:
+      type: array
+      items:
+        type: string
+      example: ['fukuoka-mitou']
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
@@ -43,6 +48,7 @@ reserve:
     - id
     - place
     - purpose
+    - attributes
     - status
     - start_at
     - end_at
@@ -55,6 +61,11 @@ reserve-new:
     purpose:
       type: string
       example: 'リモートワーク'
+    attributes:
+      type: array
+      items:
+        type: string
+      example: ['fukuoka-mitou']
     start_at:
       type: string
       format: date-time
@@ -64,6 +75,7 @@ reserve-new:
   required:
     - place_id
     - purpose
+    - attributes
     - start_at
     - end_at
     
