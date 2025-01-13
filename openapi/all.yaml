@@ -7,16 +7,16 @@ paths:
 
   /auth:
     $ref: ./paths/user/auth.yaml
-  /me/history:
+  /history:
     $ref: ./paths/user/history.yaml
 
   /places:
     $ref: ./paths/places.yaml
 
-  /me/reserve:
-    $ref: ./paths/me/reserve.yaml
-  /me/cancel:
-    $ref: ./paths/me/cancel.yaml
+  /reserve:
+    $ref: ./paths/reserve/reserve.yaml
+  /cancel:
+    $ref: ./paths/reserve/cancel.yaml
 
   /system/enter:
     $ref: ./paths/system/enter.yaml
