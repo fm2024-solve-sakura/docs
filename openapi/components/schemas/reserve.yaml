@@ -15,12 +15,12 @@ id-with-userid:
     id:
       type: string
       format: uuid
+    # optional
     user_id:
       type: string
       format: uuid
   required:
     - id
-    - user_id
 reserve:
   type: object
   properties:
@@ -32,11 +32,9 @@ reserve:
     purpose:
       type: string
       example: 'リモートワーク'
-    attributes:
-      type: array
-      items:
-        type: string
-      example: ['fukuoka-mitou']
+    attribute:
+      type: string
+      example: 'fukuoka-mitou'
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
@@ -50,7 +48,7 @@ reserve:
     - id
     - place
     - purpose
-    - attributes
+    - attribute
     - status
     - start_at
     - end_at
@@ -63,11 +61,9 @@ reserve-new:
     purpose:
       type: string
       example: 'リモートワーク'
-    attributes:
-      type: array
-      items:
-        type: string
-      example: ['fukuoka-mitou']
+    attribute:
+      type: string
+      example: 'fukuoka-mitou'
     start_at:
       type: string
       format: date-time
@@ -79,7 +75,7 @@ reserve-new:
   required:
     - place_id
     - purpose
-    - attributes
+    - attribute
     - start_at
     - end_at
     - password
