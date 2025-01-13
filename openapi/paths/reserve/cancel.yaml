@@ -1,22 +1,20 @@
 post:
   tags:
-    - admin
-  summary: 施設情報登録
-  parameters:
-    - $ref: '../../components/params/header.yaml#/auth'
+    - reserve
+  summary: 予約キャンセル
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/place.yaml#/place-new'
+          $ref: '../../components/schemas/reserve.yaml#/id'
   responses:
-    '201':
-      description: 登録成功
+    '200':
+      description: 認証成功
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/place.yaml#/place'
+            $ref: '../../components/schemas/reserve.yaml#/reserve'
     '400':
       description: リクエストボディが不正
       content:

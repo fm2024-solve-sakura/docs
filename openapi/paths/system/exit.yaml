@@ -1,4 +1,6 @@
 post:
+  tags:
+    - system
   summary: 退室
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
