@@ -4,9 +4,11 @@ id:
     id:
       type: string
       format: uuid
+    password:
+      type: string
   required:
     - id
-    - user_id
+    - password
 id-with-userid:
   type: object
   properties:
@@ -72,10 +74,13 @@ reserve-new:
     end_at:
       type: string
       format: date-time
+    password:
+      type: string
   required:
     - place_id
     - purpose
     - attributes
     - start_at
     - end_at
+    - password
     

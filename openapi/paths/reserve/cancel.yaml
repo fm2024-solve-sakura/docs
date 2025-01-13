@@ -2,8 +2,6 @@ post:
   tags:
     - reserve
   summary: 予約キャンセル
-  parameters:
-    - $ref: '../../components/params/header.yaml#/auth'
   requestBody:
     required: true
     content:
