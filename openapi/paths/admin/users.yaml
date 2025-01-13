@@ -1,4 +1,6 @@
 get:
+  tags:
+    - admin
   summary: ユーザー情報一覧取得
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
@@ -24,6 +26,8 @@ get:
           schema:
             $ref: '../../components/schemas/errors.yaml#/error-500'
 post:
+  tags:
+    - admin
   summary: ユーザー属性更新
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'

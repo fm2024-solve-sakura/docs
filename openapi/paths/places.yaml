@@ -1,4 +1,6 @@
 get:
+  tags:
+    - place
   summary: 施設情報一覧取得
   responses:
     '200':

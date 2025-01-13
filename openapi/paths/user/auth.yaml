@@ -1,64 +1,68 @@
 post:
+  tags:
+    - user
   summary: ユーザー登録
   parameters:
-    - $ref: '../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/header.yaml#/auth'
   responses:
     '201':
       description: 登録成功
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user.yaml#/user'
+            $ref: '../../components/schemas/user.yaml#/user'
     '400':
       description: ヘッダーが存在しない
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-400'
+            $ref: '../../components/schemas/errors.yaml#/error-400'
     '401':
       description: トークンが不正
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-401'
+            $ref: '../../components/schemas/errors.yaml#/error-401'
     '500':
       description: サーバーエラー
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-500'
+            $ref: '../../components/schemas/errors.yaml#/error-500'
 get:
+  tags:
+    - user
   summary: ユーザー情報取得
   parameters:
-    - $ref: '../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/header.yaml#/auth'
   responses:
     '200':
       description: 認証成功
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user.yaml#/user'
+            $ref: '../../components/schemas/user.yaml#/user'
     '400':
       description: ヘッダーが存在しない
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-400'
+            $ref: '../../components/schemas/errors.yaml#/error-400'
     '401':
       description: トークンが不正
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-401'
+            $ref: '../../components/schemas/errors.yaml#/error-401'
     '404':
       description: ユーザーが存在しない
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-404'
+            $ref: '../../components/schemas/errors.yaml#/error-404'
     '500':
       description: サーバーエラー
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/errors.yaml#/error-500'
+            $ref: '../../components/schemas/errors.yaml#/error-500'

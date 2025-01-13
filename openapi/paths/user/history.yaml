@@ -1,4 +1,6 @@
 get:
+  tags:
+    - user
   summary: 予約履歴取得
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'

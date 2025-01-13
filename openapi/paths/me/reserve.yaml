@@ -1,4 +1,6 @@
 post:
+  tags:
+    - reserve
   summary: 施設予約
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
