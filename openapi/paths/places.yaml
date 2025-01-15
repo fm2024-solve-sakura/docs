@@ -11,6 +11,12 @@ get:
             type: array
             items:
               $ref: '../components/schemas/place.yaml#/place'
+    '404':
+      description: ユーザーが存在しない
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/errors.yaml#/error-404'
     '500':
       description: サーバーエラー
       content:
