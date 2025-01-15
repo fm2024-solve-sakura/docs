@@ -34,7 +34,7 @@ reserve:
       example: 'リモートワーク'
     attribute:
       type: string
-      example: 'fukuoka-mitou'
+      example: 'fukuoka_mitou'
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
@@ -63,7 +63,7 @@ reserve-new:
       example: 'リモートワーク'
     attribute:
       type: string
-      example: 'fukuoka-mitou'
+      example: 'fukuoka_mitou'
     start_at:
       type: string
       format: date-time

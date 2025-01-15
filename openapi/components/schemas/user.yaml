@@ -14,7 +14,7 @@ user:
       type: array
       items:
         type: string
-      example: ['fukuoka-mitou']
+      example: ['fukuoka_mitou']
   required:
     - id
     - username
@@ -30,7 +30,7 @@ attributes:
       type: array
       items:
         type: string
-      example: ['fukuoka-mitou']
+      example: ['fukuoka_mitou']
   required:
     - id
     - attributes

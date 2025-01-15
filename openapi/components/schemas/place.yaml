@@ -16,7 +16,7 @@ place:
     open_time:
       type: string
       format: time
-    clone_time:
+    close_time:
       type: string
       format: time
   required:
@@ -25,7 +25,7 @@ place:
     - description
     - address
     - open_time
-    - clone_time
+    - close_time
 place-new:
   type: object
   properties:
@@ -41,7 +41,7 @@ place-new:
     open_time:
       type: string
       format: time
-    clone_time:
+    close_time:
       type: string
       format: time
   required:
@@ -49,4 +49,4 @@ place-new:
     - description
     - address
     - open_time
-    - clone_time
+    - close_time
