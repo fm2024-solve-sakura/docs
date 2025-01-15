@@ -13,5 +13,6 @@ oapi-codegen:
 	fi
 	$$(go env GOPATH)/bin/oapi-codegen -generate types -package openapi -o ../backend/pkg/openapi/types.gen.go openapi/all.gen.yaml
 	$$(go env GOPATH)/bin/oapi-codegen -generate server -package openapi -o ../backend/pkg/openapi/server.gen.go openapi/all.gen.yaml
+	$$(go env GOPATH)/bin/oapi-codegen -generate spec -package openapi -o ../backend/pkg/openapi/spec.gen.go openapi/all.gen.yaml
 
 openapi: redocly oapi-codegen
