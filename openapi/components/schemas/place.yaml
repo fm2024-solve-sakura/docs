@@ -15,10 +15,10 @@ place:
       example: '福岡県福岡市xxx'
     open_time:
       type: string
-      format: time
+      format: date-time
     close_time:
       type: string
-      format: time
+      format: date-time
   required:
     - id
     - name
@@ -40,10 +40,10 @@ place-new:
       example: '福岡県福岡市xxx'
     open_time:
       type: string
-      format: time
+      format: date-time
     close_time:
       type: string
-      format: time
+      format: date-time
   required:
     - name
     - description
