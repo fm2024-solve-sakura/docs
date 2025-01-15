@@ -29,6 +29,12 @@ post:
         application/json:
           schema:
             $ref: '../../components/schemas/errors.yaml#/error-401'
+    '404':
+      description: 予約が見つからない
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-404'
     '500':
       description: サーバーエラー
       content:
