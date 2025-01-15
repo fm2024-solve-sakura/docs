@@ -45,7 +45,9 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/user.yaml#/user'
+            array:
+            items:
+              $ref: '../../components/schemas/user.yaml#/user'
     '400':
       description: リクエストボディが不正
       content:
