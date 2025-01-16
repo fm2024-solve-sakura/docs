@@ -6,3 +6,12 @@ auth:
   schema:
     type: string
     example: Bearer <token>
+
+auth-optional:
+  in: header
+  description: Google認証トークン
+  name: Authorization
+  required: false
+  schema:
+    type: string
+    example: Bearer <token>
