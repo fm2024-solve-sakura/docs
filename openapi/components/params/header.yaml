@@ -1,6 +1,6 @@
 auth:
   in: header
-  description: Google認証トークン
+  description: Google Access Token
   name: Authorization
   required: true
   schema:
@@ -9,7 +9,7 @@ auth:
 
 auth-optional:
   in: header
-  description: Google認証トークン
+  description: Google Access Token
   name: Authorization
   required: false
   schema:
