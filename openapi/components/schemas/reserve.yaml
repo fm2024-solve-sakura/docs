@@ -9,6 +9,7 @@ id:
   required:
     - id
     - password
+
 id-with-userid:
   type: object
   properties:
@@ -21,6 +22,7 @@ id-with-userid:
       format: uuid
   required:
     - id
+
 reserve:
   type: object
   properties:
@@ -35,6 +37,9 @@ reserve:
     attribute:
       type: string
       example: 'fukuoka_mitou'
+    organization: # optional
+      type: string
+      example: '株式会社FGN'
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
@@ -52,6 +57,7 @@ reserve:
     - status
     - start_at
     - end_at
+
 reserve-new:
   type: object
   properties:
@@ -64,6 +70,9 @@ reserve-new:
     attribute:
       type: string
       example: 'fukuoka_mitou'
+    organization: # optional
+      type: string
+      example: '株式会社FGN'
     start_at:
       type: string
       format: date-time
