@@ -1,7 +1,7 @@
 get:
   tags:
     - metrics
-  summary: 週間メトリクス取得
+  summary: メトリクス取得
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:
@@ -21,23 +21,27 @@ get:
                       type: string
                       format: date
                       description: 日付
-                      example: "2025-01-01"
-                    user_count:
-                      type: integer
-                      description: ユーザー数
-                      example: 123
+                      example: "2025-01-01"         
                     average_usage_time:
                       type: string
                       description: 平均利用時間 (HH:mm:ss)
                       example: "00:45:30"
-                    user_attributes:
+                    total_reservations:
+                      type: integer
+                      description: 1日の予約合計数
+                      example: 150
+                    reservation_attributes:
                       type: object
-                      description: ユーザー属性の分布
+                      description: 当日の利用者属性ごとの予約数
                       additionalProperties:
                         type: integer
                       example:
-                        attribute1: 45
-                        attribute2: 78
+                        attribute1: 50
+                        attribute2: 100
+                    total_reservation_count:
+                      type: integer
+                      description: 総予約数
+                      example: 300
     '401':
       description: 認証失敗
       content:
