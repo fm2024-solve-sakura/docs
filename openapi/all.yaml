@@ -25,5 +25,7 @@ paths:
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
+  /admin/organizations:
+    $ref: ./paths/admin/organizations.yaml
   /admin/places:
     $ref: ./paths/admin/places.yaml

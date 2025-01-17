@@ -1,0 +1,37 @@
+post:
+  tags:
+    - admin
+  summary: 組織情報登録
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/organization.yaml#/organization-new'
+  responses:
+    '201':
+      description: 登録成功
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/organization.yaml#/organization'
+    '400':
+      description: リクエストボディが不正
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-400'
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'

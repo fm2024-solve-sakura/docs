@@ -1,0 +1,37 @@
+organization:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuid
+    name:
+      type: string
+      example: '株式会社FGN'
+    max_reserve:
+      type: integer
+      example: 5
+    attribute:
+      type: string
+      example: 'sponsor'
+  required:
+    - id
+    - name
+    - max_reserve
+    - attribute
+
+organization-new:
+  type: object
+  properties:
+    name:
+      type: string
+      example: '株式会社FGN'
+    max_reserve:
+      type: integer
+      example: 5
+    attribute:
+      type: string
+      example: 'sponsor'
+  required:
+    - name
+    - max_reserve
+    - attribute
