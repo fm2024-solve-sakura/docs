@@ -1,0 +1,58 @@
+get:
+  tags:
+    - metrics
+  summary: 週間メトリクス取得
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+  responses:
+    '200':
+      description: メトリクス取得成功
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              metrics:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date
+                      description: 日付
+                      example: "2025-01-01"
+                    user_count:
+                      type: integer
+                      description: ユーザー数
+                      example: 123
+                    average_usage_time:
+                      type: string
+                      description: 平均利用時間 (HH:mm:ss)
+                      example: "00:45:30"
+                    user_attributes:
+                      type: object
+                      description: ユーザー属性の分布
+                      additionalProperties:
+                        type: integer
+                      example:
+                        attribute1: 45
+                        attribute2: 78
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '404':
+      description: データが存在しない
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-404'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'
