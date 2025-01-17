@@ -15,16 +15,22 @@ paths:
 
   /reserve:
     $ref: ./paths/reserve/reserve.yaml
-  /cancel:
+  /reserve/cancel:
     $ref: ./paths/reserve/cancel.yaml
+  /reserve/attributes:
+    $ref: ./paths/reserve/attributes.yaml
 
   /system/enter:
     $ref: ./paths/system/enter.yaml
   /system/exit:
     $ref: ./paths/system/exit.yaml
+  /system/organizations:
+    $ref: ./paths/system/organizations.yaml
 
   /admin/users:
     $ref: ./paths/admin/users.yaml
+  /admin/attributes:
+    $ref: ./paths/admin/attributes.yaml
   /admin/organizations:
     $ref: ./paths/admin/organizations.yaml
   /admin/places:

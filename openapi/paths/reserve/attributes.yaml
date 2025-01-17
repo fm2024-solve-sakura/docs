@@ -1,0 +1,34 @@
+get:
+  tags:
+    - reserve
+  summary: 属性情報一覧取得
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+  responses:
+    '200':
+      description: 取得成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "fukuoka_mitou"
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '404':
+      description: 属性が存在しない
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-404'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'
