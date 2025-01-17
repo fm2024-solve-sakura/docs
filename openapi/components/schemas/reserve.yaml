@@ -37,9 +37,9 @@ reserve:
     attribute:
       type: string
       example: 'fukuoka_mitou'
-    organization: # optional
+    organization_id: # optional
       type: string
-      example: '株式会社FGN'
+      format: uuid
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
@@ -70,9 +70,9 @@ reserve-new:
     attribute:
       type: string
       example: 'fukuoka_mitou'
-    organization: # optional
+    organization_id: # optional
       type: string
-      example: '株式会社FGN'
+      format: uuid
     start_at:
       type: string
       format: date-time
