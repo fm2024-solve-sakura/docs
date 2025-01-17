@@ -2,8 +2,6 @@ get:
   tags:
     - reserve
   summary: 属性情報一覧取得
-  parameters:
-    - $ref: '../../components/params/header.yaml#/auth'
   responses:
     '200':
       description: 取得成功
