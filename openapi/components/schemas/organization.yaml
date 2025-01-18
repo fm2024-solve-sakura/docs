@@ -13,11 +13,17 @@ organization:
     attribute:
       type: string
       example: 'sponsor'
+    alias_list:
+      type: array
+      items:
+        type: string
+        example: ['㈱エフジーエヌ']
   required:
     - id
     - name
     - max_reserve
     - attribute
+    - alias_list
 
 organization-new:
   type: object
@@ -31,7 +37,13 @@ organization-new:
     attribute:
       type: string
       example: 'sponsor'
+    alias_list:
+      type: array
+      items:
+        type: string
+        example: ['㈱エフジーエヌ']
   required:
     - name
     - max_reserve
     - attribute
+    - alias_list
