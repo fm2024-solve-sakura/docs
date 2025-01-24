@@ -4,20 +4,25 @@ organization:
     id:
       type: string
       format: uuid
+      description: 組織データの内部ID
     name:
       type: string
       example: '株式会社FGN'
+      description: 組織名
     max_reserve:
       type: integer
       example: 5
+      description: その組織が持っている同時に予約できる枠の数
     attribute:
       type: string
       example: 'sponsor'
+      description: 組織が利用しているプラン(属性), 事実上enum型
     alias_list:
       type: array
       items:
         type: string
         example: ['㈱エフジーエヌ']
+      description: 組織の別表記・略称など
   required:
     - id
     - name
@@ -31,17 +36,21 @@ organization-new:
     name:
       type: string
       example: '株式会社FGN'
+      description: 組織名
     max_reserve:
       type: integer
       example: 5
+      description: その組織が持っている同時に予約できる枠の数
     attribute:
       type: string
       example: 'sponsor'
+      description: "組織が利用しているプラン(属性), 事実上enum型"
     alias_list:
       type: array
       items:
         type: string
         example: ['㈱エフジーエヌ']
+      description: 組織の別表記・略称など
   required:
     - name
     - max_reserve

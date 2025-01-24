@@ -1,6 +1,6 @@
 auth:
   in: header
-  description: Google Access Token
+  description: GoogleOAuthのAccessToken
   name: Authorization
   required: true
   schema:
@@ -9,7 +9,7 @@ auth:
 
 auth-optional:
   in: header
-  description: Google Access Token
+  description: GoogleOAuthのAccessToken
   name: Authorization
   required: false
   schema:

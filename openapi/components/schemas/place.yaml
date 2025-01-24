@@ -4,21 +4,27 @@ place:
     id:
       type: string
       format: uuid
+      description: 施設データの内部UUID
     name:
       type: string
       example: '作業スペースA'
+      description: 施設名
     description:
       type: string
       example: '一人用作業室・wifiコンセント完備'
+      description: 施設の説明
     address:
       type: string
       example: '福岡県福岡市xxx'
+      description: 施設の住所
     open_time:
       type: string
       format: date-time
+      description: 施設の開館時間
     close_time:
       type: string
       format: date-time
+      description: 施設の閉館時間
   required:
     - id
     - name
@@ -26,24 +32,30 @@ place:
     - address
     - open_time
     - close_time
+    
 place-new:
   type: object
   properties:
     name:
       type: string
       example: '作業スペースA'
+      description: 施設名
     description:
       type: string
       example: '一人用作業室・wifiコンセント完備'
+      description: 施設の説明
     address:
       type: string
       example: '福岡県福岡市xxx'
+      description: 施設の住所
     open_time:
       type: string
       format: date-time
+      description: 施設の開館時間
     close_time:
       type: string
       format: date-time
+      description: 施設の閉館時間
   required:
     - name
     - description

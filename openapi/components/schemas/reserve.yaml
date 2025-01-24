@@ -4,8 +4,10 @@ id:
     id:
       type: string
       format: uuid
+      description: 予約データの内部UUID
     password:
       type: string
+      description: 予約の削除に必要なあいことば, ユーザー登録していない場合はこれがないと削除できない
   required:
     - id
     - password
@@ -16,10 +18,12 @@ id-with-userid:
     id:
       type: string
       format: uuid
+      description: 予約データの内部UUID
     # optional
     user_id:
       type: string
       format: uuid
+      description: 予約をしたユーザーの内部UUID, 結局使わなくなったので無くて良い
   required:
     - id
 
@@ -29,26 +33,34 @@ reserve:
     id:
       type: string
       format: uuid
+      description: 予約データの内部UUID
     place:
       $ref: './place.yaml#/place'
+      description: 予約された施設の情報
     purpose:
       type: string
       example: 'リモートワーク'
+      description: 予約の目的
     attribute:
       type: string
       example: 'fukuoka_mitou'
+      description: 予約した利用者のプラン(属性), 事実上enum型
     organization_id: # optional
       type: string
       format: uuid
+      description: 予約した利用者の所属組織の内部ID, スポンサープランなど組織として契約している場合は必須
     status:
       type: string
       enum: ['reserved', 'in_use', 'used', 'canceled']
+      description: 予約のステータス
     start_at:
       type: string
       format: date-time
+      description: 利用開始時間
     end_at:
       type: string
       format: date-time
+      description: 利用終了時間
   required:
     - id
     - place
@@ -64,23 +76,30 @@ reserve-new:
     place_id:
       type: string
       format: uuid
+      description: 予約する施設のデータの内部UUID
     purpose:
       type: string
       example: 'リモートワーク'
+      description: 予約の目的
     attribute:
       type: string
       example: 'fukuoka_mitou'
+      description: 予約した利用者のプラン(属性), 事実上enum型
     organization_id: # optional
       type: string
       format: uuid
+      description: 予約した利用者の所属組織の内部ID, スポンサープランなど組織として契約している場合は必須
     start_at:
       type: string
       format: date-time
+      description: 利用開始時間
     end_at:
       type: string
       format: date-time
+      description: 利用終了時間
     password:
       type: string
+      description: 予約の削除に必要なあいことば, ユーザー登録していない場合はこれがないと削除できない
   required:
     - place_id
     - purpose

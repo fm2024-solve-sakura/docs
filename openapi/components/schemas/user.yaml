@@ -4,33 +4,40 @@ user:
     id:
       type: string
       format: uuid
+      description: ユーザーデータの内部UUID
     username:
       type: string
       example: 'username'
+      description: ユーザーの表示名, 今はメールアドレスと同じ
     email:
       type: string
       format: email
+      description: ユーザーのメールアドレス, Uniqueでないといけない
     attributes:
       type: array
       items:
         type: string
       example: ['fukuoka_mitou']
+      description: ユーザーのプラン(属性), 事実上enum型
   required:
     - id
     - username
     - email
     - attributes
+
 attributes:
   type: object
   properties:
     id:
       type: string
       format: uuid
+      description: ユーザーデータの内部UUID
     attributes:
       type: array
       items:
         type: string
       example: ['fukuoka_mitou']
+      description: ユーザーのプラン(属性), 事実上enum型
   required:
     - id
     - attributes
