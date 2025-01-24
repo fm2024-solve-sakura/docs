@@ -1,0 +1,46 @@
+erDiagram
+    users {
+        uuid id PK
+        string username
+        string email
+    }
+    attributes {
+        string tag PK
+    }
+    organizations {
+        uuid id PK
+        string name
+        int max_reserve
+        string attribute_tag FK
+    }
+    organization_aliases {
+        uuid id PK
+        string alias
+        uuid organization_id FK
+    }
+    places {
+        uuid id PK
+        string name
+        string description
+        string address
+        time open_time
+        time close_time
+    }
+    reserves {
+        uuid id PK
+        string purpose
+        string status
+        time start_at
+        time end_at
+        string password
+        uuid user_id FK
+        string attribute_tag FK
+        uuid organization_id FK
+        uuid place_id FK
+    }
+    organizations ||--o| organization_aliases : "has"
+    organizations ||--o| reserves : "has"
+    places ||--o| reserves : "has"
+    attributes ||--o| reserves : "has"
+    users |o--o| reserves : "makes"
+    users }|--|{ attributes : "many-to-many"
