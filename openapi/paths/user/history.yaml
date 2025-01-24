@@ -2,6 +2,8 @@ get:
   tags:
     - user
   summary: 予約履歴取得
+  description: |
+    ユーザーの予約履歴を取得する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:

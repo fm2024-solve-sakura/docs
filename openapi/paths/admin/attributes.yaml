@@ -2,6 +2,8 @@ get:
   tags:
     - admin
   summary: 属性情報一覧取得
+  description: |
+    有効なプラン(属性)一覧を取得する, adminやsystemなどの隠れ属性も含む
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:

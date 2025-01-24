@@ -2,6 +2,8 @@ post:
   tags:
     - reserve
   summary: 予約キャンセル
+  description: |
+    予約をキャンセルする
   requestBody:
     required: true
     content:

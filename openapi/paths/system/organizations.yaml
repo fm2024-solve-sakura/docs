@@ -2,6 +2,8 @@ get:
   tags:
     - system
   summary: 組織情報一覧取得
+  description: |
+    組織情報一覧を取得する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:

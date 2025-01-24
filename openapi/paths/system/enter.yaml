@@ -2,6 +2,8 @@ post:
   tags:
     - system
   summary: 入室
+  description: |
+    入室手続き, statusをin_useに変更する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   requestBody:

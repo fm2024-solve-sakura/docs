@@ -2,6 +2,8 @@ post:
   tags:
     - system
   summary: 退室
+  description: |
+    退室手続き, statusをexitedに変更する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   requestBody:

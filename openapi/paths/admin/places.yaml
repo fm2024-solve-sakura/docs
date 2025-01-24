@@ -2,6 +2,8 @@ post:
   tags:
     - admin
   summary: 施設情報登録
+  description: |
+    新しい施設を登録する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   requestBody:

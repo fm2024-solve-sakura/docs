@@ -2,6 +2,8 @@ get:
   tags:
   - system
   summary: OCR解析文字列から組織情報取得
+  description: |
+    OCR解析文字列から組織情報を取得する, OCR解析文字列に限らず曖昧な値を一意に特定する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
     - in: query

@@ -2,6 +2,8 @@ post:
   tags:
     - reserve
   summary: 施設予約
+  description: |
+    利用の予約をする
   parameters:
     - $ref: '../../components/params/header.yaml#/auth-optional'
   requestBody:

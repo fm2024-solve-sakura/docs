@@ -2,6 +2,8 @@ get:
   tags:
     - place
   summary: 施設情報一覧取得
+  description: |
+    施設情報一覧を取得する
   responses:
     '200':
       description: 取得成功

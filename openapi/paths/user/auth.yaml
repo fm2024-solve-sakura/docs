@@ -2,6 +2,8 @@ post:
   tags:
     - user
   summary: ユーザー登録
+  description: |
+    新しいユーザーを登録する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:
@@ -33,6 +35,8 @@ get:
   tags:
     - user
   summary: ユーザー情報取得
+  description: |
+    ユーザー情報を取得する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:

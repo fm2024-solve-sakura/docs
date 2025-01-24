@@ -2,6 +2,8 @@ get:
   tags:
     - admin
   summary: ユーザー情報一覧取得
+  description: |
+    ユーザー情報一覧を取得する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   responses:
@@ -35,6 +37,8 @@ post:
   tags:
     - admin
   summary: ユーザー属性更新
+  description: |
+    ユーザープラン(属性)を一括で更新する
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
   requestBody:

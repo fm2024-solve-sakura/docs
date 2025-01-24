@@ -2,6 +2,8 @@ get:
   tags:
     - reserve
   summary: 属性情報一覧取得
+  description: |
+    有効なプラン(属性)一覧を取得する, 選択肢として使われる想定
   responses:
     '200':
       description: 取得成功
