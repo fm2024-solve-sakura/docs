@@ -38,9 +38,10 @@ erDiagram
         uuid organization_id FK
         uuid place_id FK
     }
-    organizations ||--o| organization_aliases : "has"
-    organizations ||--o| reserves : "has"
-    places ||--o| reserves : "has"
-    attributes ||--o| reserves : "has"
-    users |o--o| reserves : "makes"
-    users }|--|{ attributes : "many-to-many"
+    users |o--o{ reserves : "makes"
+    users }o--o{ attributes : "many-to-many"
+    places ||--o{ reserves : "has"
+    attributes ||--o{ reserves : "has"
+    organizations ||--o{ organization_aliases : "has"
+    organizations ||--o{ reserves : "has"
+    organizations ||--|| attributes : "has"
