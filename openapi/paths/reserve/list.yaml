@@ -4,9 +4,6 @@ get:
   summary: 予約を一括取得
   description: |
     予約を一括取得する。既に埋まっている時間等を表示するために仕様する想定。
-  parameters:
-    - $ref: '../../components/params/time.yaml#/since'
-    - $ref: '../../components/params/time.yaml#/until'
   responses:
     '200':
       description: 予約取得成功
