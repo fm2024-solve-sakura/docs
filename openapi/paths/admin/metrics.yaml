@@ -8,6 +8,7 @@ get:
     `weekly` または `monthly` の場合、週ごとまたは月ごとのメトリクスを返します。
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/time.yaml#/since'
     - $ref: '../../components/params/time.yaml#/until'
     - in: query
       name: period
@@ -24,27 +25,6 @@ get:
         type: string
         enum: [daily, weekly, monthly]
         example: "daily"
-  requestBody:
-    description: 指定期間を明示する場合に使用します。デフォルトでは今日から1週間前までのデータを取得します。
-    required: false
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            start_date:
-              type: string
-              format: date
-              description: メトリクス取得の開始日
-              example: "2025-01-01"
-            end_date:
-              type: string
-              format: date
-              description: メトリクス取得の終了日
-              example: "2025-01-02"
-          example:
-            start_date: "2025-01-01"
-            end_date: "2025-01-02"
   responses:
     '200':
       description: >
