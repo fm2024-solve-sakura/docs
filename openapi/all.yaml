@@ -19,7 +19,7 @@ paths:
     $ref: ./paths/reserve/cancel.yaml
   /reserve/attributes:
     $ref: ./paths/reserve/attributes.yaml
-  /reserve/attributes/list:
+  /reserve/list:
     $ref: ./paths/reserve/list.yaml
 
   /system/enter:
