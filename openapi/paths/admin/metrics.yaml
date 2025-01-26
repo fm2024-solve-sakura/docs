@@ -2,11 +2,54 @@ get:
   tags:
     - metrics
   summary: メトリクス取得
+  description: >
+    指定した期間のメトリクスを取得します。  
+    デフォルトでは日ごとのメトリクスが返ります。  
+    `weekly` または `monthly` の場合、週ごとまたは月ごとのメトリクスを返します。
   parameters:
     - $ref: '../../components/params/header.yaml#/auth'
+    - in: query
+      name: period
+      required: false
+      description: >
+        取得したい集計期間。  
+
+          - `daily`: 日ごとのメトリクス。  
+          - `weekly`: 週ごとのメトリクス。  
+          - `monthly`: 月ごとのメトリクス。  
+            
+        指定がない場合はデフォルトで `daily` が選択されます。
+      schema:
+        type: string
+        enum: [daily, weekly, monthly]
+        example: "daily"
+  requestBody:
+    description: 指定期間を明示する場合に使用します。デフォルトでは今日から1週間前までのデータを取得します。
+    required: false
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            start_date:
+              type: string
+              format: date
+              description: メトリクス取得の開始日
+              example: "2025-01-01"
+            end_date:
+              type: string
+              format: date
+              description: メトリクス取得の終了日
+              example: "2025-01-02"
+          example:
+            start_date: "2025-01-01"
+            end_date: "2025-01-02"
   responses:
     '200':
-      description: メトリクス取得成功
+      description: >
+        メトリクス取得成功。  
+        デフォルトでは日ごとのメトリクスを返します。  
+        `weekly` または `monthly` の場合、週ごとまたは月ごとのメトリクスを返します。
       content:
         application/json:
           schema:
@@ -14,34 +57,98 @@ get:
             properties:
               metrics:
                 type: array
+                description: >
+                  指定期間内の日ごとのメトリクスの配列。  
+                  `period` が `daily` の場合、各日ごとのデータを返します。
                 items:
                   type: object
                   properties:
-                    date:
+                    start_date:
                       type: string
                       format: date
-                      description: 日付
-                      example: "2025-01-01"         
+                      description: 集計期間の開始日 (この場合、1日単位の日付)
+                      example: "2025-01-01"
+                    end_date:
+                      type: string
+                      format: date
+                      description: 集計期間の終了日 (この場合、開始日と同じ日付)
+                      example: "2025-01-01"
                     average_usage_time:
                       type: string
-                      description: 平均利用時間 (HH:mm:ss)
+                      description: 集計期間内の平均利用時間 (HH:mm:ss)
                       example: "00:45:30"
-                    total_reservations:
+                    total_facility_reservations:
                       type: integer
-                      description: 1日の予約合計数
-                      example: 150
-                    reservation_attributes:
+                      description: 集計期間内の施設予約数
+                      example: 80
+                    coworking_space_users_count_by_membership:
                       type: object
-                      description: 当日の利用者属性ごとの予約数
+                      description: コワーキングスペース利用者数 (会員区分ごと)
                       additionalProperties:
                         type: integer
                       example:
-                        attribute1: 50
-                        attribute2: 100
+                        sponsor: 30
+                        drop_in: 50
+                        student: 10
+                        fukuoka_mitou: 5
+                        admin: 2
+                        system: 1
+                    reserve_count_by_membership:
+                      type: object
+                      description: 集計期間内の施設予約数 (会員区分ごと)
+                      additionalProperties:
+                        type: integer
+                      example:
+                        sponsor: 30
+                        drop_in: 50
+                        student: 10
+                        fukuoka_mitou: 5
+                        admin: 2
+                        system: 1
                     total_reservation_count:
                       type: integer
-                      description: 総予約数
-                      example: 300
+                      description: 集計期間内の総予約数
+                      example: 230
+          example:
+            metrics:
+              - start_date: "2025-01-01"
+                end_date: "2025-01-01"
+                average_usage_time: "00:45:30"
+                total_facility_reservations: 80
+                coworking_space_users_count_by_membership:
+                  sponsor: 30
+                  drop_in: 50
+                  student: 10
+                  fukuoka_mitou: 5
+                  admin: 2
+                  system: 1
+                reserve_count_by_membership:
+                  sponsor: 30
+                  drop_in: 50
+                  student: 10
+                  fukuoka_mitou: 5
+                  admin: 2
+                  system: 1
+                total_reservation_count: 230
+              - start_date: "2025-01-02"
+                end_date: "2025-01-02"
+                average_usage_time: "00:40:15"
+                total_facility_reservations: 70
+                coworking_space_users_count_by_membership:
+                  sponsor: 25
+                  drop_in: 45
+                  student: 8
+                  fukuoka_mitou: 4
+                  admin: 1
+                  system: 0
+                reserve_count_by_membership:
+                  sponsor: 25
+                  drop_in: 45
+                  student: 8
+                  fukuoka_mitou: 4
+                  admin: 1
+                  system: 0
+                total_reservation_count: 210
     '401':
       description: 認証失敗
       content:
