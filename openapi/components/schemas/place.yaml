@@ -17,6 +17,14 @@ place:
       type: string
       example: '福岡県福岡市xxx'
       description: 施設の住所
+    needs_reservation:
+      type: boolean
+      example: false
+      description: 事前予約が必要かどうか
+    max_capacity:
+      type: integer
+      example: 10
+      description: 最大収容人数
     open_time:
       type: string
       format: date-time
@@ -30,6 +38,8 @@ place:
     - name
     - description
     - address
+    - needs_reservation
+    - max_capacity
     - open_time
     - close_time
     
@@ -48,6 +58,14 @@ place-new:
       type: string
       example: '福岡県福岡市xxx'
       description: 施設の住所
+    needs_reservation:
+      type: boolean
+      example: false
+      description: 事前予約が必要かどうか
+    max_capacity:
+      type: integer
+      example: 10
+      description: 最大収容人数
     open_time:
       type: string
       format: date-time
@@ -60,5 +78,7 @@ place-new:
     - name
     - description
     - address
+    - needs_reservation
+    - max_capacity
     - open_time
     - close_time
