@@ -1,0 +1,65 @@
+get:
+  tags:
+    - admin
+  summary: 未承認予約一覧取得
+  description: |
+    未承認予約一覧を取得する。ここから承認を行う。
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+  responses:
+    '200':
+      description: 認証成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/schemas/reserve.yaml#/reserve'
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'
+
+post:
+  tags:
+    - admin
+  summary: 予約承認
+  description: |
+    予約を承認する
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/reserve.yaml#/id-with-userid'
+  responses:
+    '200':
+      description: 認証成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/schemas/reserve.yaml#/id-with-userid'
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'

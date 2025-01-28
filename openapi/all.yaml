@@ -39,5 +39,7 @@ paths:
     $ref: ./paths/admin/organizations.yaml
   /admin/places:
     $ref: ./paths/admin/places.yaml
+  /admin/approve:
+    $ref: ./paths/admin/approve.yaml
   /admin/metrics:
     $ref: ./paths/admin/metrics.yaml
