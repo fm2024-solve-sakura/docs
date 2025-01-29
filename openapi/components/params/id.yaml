@@ -1,0 +1,9 @@
+reserve-id:
+  in: path
+  name: id
+  required: true
+  description: >
+    リソースのID
+  schema:
+    type: string
+    format: uuid

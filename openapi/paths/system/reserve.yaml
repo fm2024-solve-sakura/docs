@@ -1,0 +1,40 @@
+get:
+  tags:
+    - system
+  summary: 予約情報取得
+  description: |
+    予約情報をidから取得する
+  parameters:
+    - $ref: '../../components/params/header.yaml#/auth'
+    - $ref: '../../components/params/id.yaml#/reserve-id'
+  responses:
+    '200':
+      description: 取得成功
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/reserve.yaml#/reserve'
+    '400':
+      description: ヘッダーが存在しない
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-400'
+    '401':
+      description: 認証失敗
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-401'
+    '404':
+      description: 予約が存在しない
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-404'
+    '500':
+      description: サーバーエラー
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/errors.yaml#/error-500'

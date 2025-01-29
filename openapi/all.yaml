@@ -26,6 +26,8 @@ paths:
     $ref: ./paths/system/enter.yaml
   /system/exit:
     $ref: ./paths/system/exit.yaml
+  /system/reserve/{id}:
+    $ref: ./paths/system/reserve.yaml
   /system/organizations:
     $ref: ./paths/system/organizations.yaml
   /system/organizations/resolve:
