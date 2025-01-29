@@ -21,6 +21,8 @@ paths:
     $ref: ./paths/reserve/attributes.yaml
   /reserve/list:
     $ref: ./paths/reserve/list.yaml
+  /reserve/qr/{id}:
+    $ref: ./paths/reserve/qr.yaml
 
   /system/enter:
     $ref: ./paths/system/enter.yaml
