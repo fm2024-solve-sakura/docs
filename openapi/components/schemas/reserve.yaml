@@ -73,6 +73,10 @@ reserve:
 reserve-new:
   type: object
   properties:
+    email:
+      type: string
+      format: email
+      description: 予約した利用者のメールアドレス, ログインしていない場合は必須
     place_id:
       type: string
       format: uuid
